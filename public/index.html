@@ -1,0 +1,184 @@
+<html>
+
+<head>
+  <title>Demo node-web-extractor</title>
+  <style>
+    body { padding: 50px; }
+    h3 {margin-top: 5em;}
+    textarea {width: 100%; max-width: 50em;}
+  </style>
+</head>
+
+<body>
+
+<h1>node-web-extractor</h1>
+
+<h2>Examples for POST (data/v1)</h2>
+<h3>1-kg-degussa-goldbarren</h3>
+<div>
+  <form action="data/v1" method="post" target="_blank">
+        <textarea name="data" rows="9">
+{
+  "externalUrl": "https://shop.degussa-goldhandel.de/1-kg-degussa-goldbarren",
+  "jqueryPattern": "#product-price-17 span.price",
+  "replacePattern": " €|\\.",
+  "parseFloat": true,
+  "targetKey": "price",
+  "debugging": false
+}
+        </textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<!--
+<h3>1-oz-kruegerrand</h3>
+<div>
+  <form action="data/v1" method="post">
+        <textarea name="data" rows="10">
+{
+  "externalUrl": "https://shop.degussa-goldhandel.de/1-oz-kruegerrand-goldmuenze-2016",
+  "jqueryPattern": "#product-price-1763 span.price",
+  "replacePattern": " €|\\.",
+  "parseFloat": true,
+  "targetKey": "price",
+  "debugging": false
+}
+        </textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+-->
+
+
+
+<h3>coinmarketcap top 100</h3>
+<div>
+  <form action="data/v1" method="post">
+        <textarea name="data" rows="18">
+{
+  "externalUrl": "https://coinmarketcap.com/",
+  "replacements": [
+      {
+        "pattern": "<\/td>",
+        "target": ";</td>"
+      },
+      {
+        "pattern": ";<\/td><\/tr>",
+        "target": "|<td></tr>"
+      }
+    ],
+  "jqueryPattern":".cmc-table__table-wrapper-outer table tbody",
+  "splits": ["|", ";"]
+}
+        </textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+
+
+<h3>Alphabet (US02079K1079)</h3>
+<div>
+  <form action="data/v1" method="post">
+        <textarea name="data" rows="9">
+{
+  "externalUrl": "https://www.onvista.de/aktien/Alphabet-Inc-C-Aktie-US02079K1079",
+  "jqueryPattern": "li[data-push-config]",
+  "replacePattern": ",\\d\\d\\d EUR(.)+|\\.",
+  "parseFloat": true,
+  "targetKey": "price",
+  "debugging": false
+}
+        </textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<!--
+<h3>Amazon</h3>
+<div>
+  <form action="data/v1" method="post">
+        <textarea name="data" rows="10">
+{
+  "externalUrl": "https://www.onvista.de/aktien/Amazon-Aktie-US0231351067",
+  "jqueryPattern": "li[data-push-config]",
+  "replacePattern": ",\\d\\d\\d EUR(.)+|\\.",
+  "parseFloat": true,
+  "targetKey": "price",
+  "debugging": false
+}
+        </textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+<h3>NVIDIA</h3>
+<div>
+  <form action="data/v1" method="post">
+        <textarea name="data" rows="10">
+{
+  "externalUrl": "https://www.onvista.de/aktien/Nvidia-Aktie-US67066G1040",
+  "jqueryPattern": "li[data-push-config]",
+  "replacePattern": ",\\d\\d\\d EUR(.)+|\\.",
+  "parseFloat": true,
+  "targetKey": "price",
+  "debugging": false
+}
+        </textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+<h3>Tesla</h3>
+<div>
+  <form action="data/v1" method="post">
+        <textarea name="data" rows="10">
+{
+  "externalUrl": "https://www.onvista.de/aktien/Tesla-Aktie-US88160R1014",
+  "jqueryPattern": "li[data-push-config]",
+  "replacePattern": ",\\d\\d\\d EUR(.)+|\\.",
+  "parseFloat": true,
+  "targetKey": "price",
+  "debugging": false
+}
+        </textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+<h3>Square</h3>
+<div>
+  <form action="data/v1" method="post">
+        <textarea name="data" rows="10">
+{
+  "externalUrl": "https://www.onvista.de/aktien/SQUARE-INC-COM-Aktie-US8522341036",
+  "jqueryPattern": "li[data-push-config]",
+  "replacePattern": ",\\d\\d\\d EUR(.)+|\\.",
+  "parseFloat": true,
+  "targetKey": "price",
+  "debugging": false
+}
+        </textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+-->
+
+
+</body>
+
+</html>
