@@ -1,11 +1,32 @@
 # node-web-extractor
-simple noder server for fetching data from external sites
 
+Simple node server for fetching data from external sites
 
-_npm install_
+- npm install
+- npm run start
+- open browser at [localhost:3000](http://localhost:3000/)
 
+##Usage: Dockerfile
+```
+FROM node:12
 
-_npm run start_
+# Create app directory
+WORKDIR /usr/src/app
 
+# Install app dependencies
 
-open browser at [localhost:3000](http://localhost:3000/)
+# create package.json
+RUN npm init -f
+
+# Install app dependencies
+RUN npm install cheerio@^1.0.0-rc.3 cookie-parser@~1.4.4 debug@~2.6.9 express@~4.16.1 morgan@~1.9.1 node-web-extractor@^0.0.3
+
+# If you are building your code for production
+RUN npm ci --only=production
+
+# port
+EXPOSE 3000
+
+# run
+CMD [ "node", "./node_modules/node-web-extractor/bin/www" ]
+```
