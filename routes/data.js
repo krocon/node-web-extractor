@@ -20,7 +20,7 @@ router.post('/v1', (req, res, next) => {
     options = JSON.parse(req.body.data);
   }
 
-  if (!options.externalUrl) {
+  if (!options || !options.externalUrl) {
     errorHandler({statusCode: 400, name:'error', message:'Problem: Cannot parse ' + req.body});
     return;
   }
