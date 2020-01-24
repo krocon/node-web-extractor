@@ -12,8 +12,11 @@ router.post('/v1', (req, res, next) => {
     res.jsonp({statusCode: httpsRes.statusCode, message: e.message, name: e.name});
   };
 
-  console.info(req.body.data);
-  console.info(req.body.data.price);
+  console.info('req.body', req.body);
+  console.info('req.body.data', req.body.data);
+
+
+
   const options = JSON.parse(req.body.data);
   const protocol = options.externalUrl.split(':')[0];
   const httpModule = require(protocol);
