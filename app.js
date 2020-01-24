@@ -5,13 +5,10 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const dataRouter = require('./routes/data');
-
-
-
+const pj = require('./package');
 
 const app = express();
-
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set('port', port);
 app.set('json spaces', 2);
@@ -28,14 +25,13 @@ app.use(express.json({
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());  // to support JSON-encoded bodies
 
-app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded()); // to support URL-encoded bodies
-
+// routes:
 app.use('/', indexRouter);
 app.use('/data', dataRouter);
 
 module.exports = app;
 
-console.info('listening on ', app.settings.port);
+console.info(pj.name + ' (' + pj.version + ') is listening on:', app.settings.port);
 

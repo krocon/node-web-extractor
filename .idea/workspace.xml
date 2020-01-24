@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f737af9b-050e-480f-969f-a71b88fc579b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/demo01/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/docker/demo01/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/demo02/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/demo02/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/demo02/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docker/demo02/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/data.js" afterDir="false" />
-    </list>
-    <list id="f0e88c5a-178f-4b63-af73-3f8567c86979" name="dummy" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +34,6 @@
         <option value="D:\data\entwicklung\node-web-extractor\.idea" />
       </set>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="4" end1="6" start2="4" end2="4" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
-        <range start1="34" end1="48" start2="32" end2="32" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
-        <range start1="217" end1="218" start2="201" end2="209" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
-        <range start1="236" end1="237" start2="227" end2="228" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
-        <range start1="239" end1="240" start2="230" end2="231" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
-        <range start1="268" end1="269" start2="259" end2="260" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
-        <range start1="271" end1="272" start2="262" end2="263" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
-        <range start1="276" end1="276" start2="267" end2="271" changelist="f0e88c5a-178f-4b63-af73-3f8567c86979" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1WiRQ56M04Ja3PzB3bV2BehOzwX" />
   <component name="ProjectViewState">
@@ -249,22 +237,22 @@
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
     <state x="1078" y="610" key="FileChooserDialogImpl/78.0.2994.1728@78.0.2994.1728" timestamp="1579631161266" />
-    <state width="2399" height="210" key="GridCell.Tab.0.bottom" timestamp="1579714306421">
+    <state width="819" height="458" key="GridCell.Tab.0.bottom" timestamp="1579900616822">
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
-    <state width="2399" height="210" key="GridCell.Tab.0.bottom/78.0.2994.1728@78.0.2994.1728" timestamp="1579714306421" />
-    <state width="2399" height="210" key="GridCell.Tab.0.center" timestamp="1579714306421">
+    <state width="819" height="458" key="GridCell.Tab.0.bottom/78.0.2994.1728@78.0.2994.1728" timestamp="1579900616822" />
+    <state width="819" height="458" key="GridCell.Tab.0.center" timestamp="1579900616821">
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
-    <state width="2399" height="210" key="GridCell.Tab.0.center/78.0.2994.1728@78.0.2994.1728" timestamp="1579714306421" />
-    <state width="2399" height="210" key="GridCell.Tab.0.left" timestamp="1579714306420">
+    <state width="819" height="458" key="GridCell.Tab.0.center/78.0.2994.1728@78.0.2994.1728" timestamp="1579900616821" />
+    <state width="819" height="458" key="GridCell.Tab.0.left" timestamp="1579900616821">
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
-    <state width="2399" height="210" key="GridCell.Tab.0.left/78.0.2994.1728@78.0.2994.1728" timestamp="1579714306420" />
-    <state width="2399" height="210" key="GridCell.Tab.0.right" timestamp="1579714306421">
+    <state width="819" height="458" key="GridCell.Tab.0.left/78.0.2994.1728@78.0.2994.1728" timestamp="1579900616821" />
+    <state width="819" height="458" key="GridCell.Tab.0.right" timestamp="1579900616822">
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
-    <state width="2399" height="210" key="GridCell.Tab.0.right/78.0.2994.1728@78.0.2994.1728" timestamp="1579714306421" />
+    <state width="819" height="458" key="GridCell.Tab.0.right/78.0.2994.1728@78.0.2994.1728" timestamp="1579900616822" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1579890731970">
       <screen x="78" y="0" width="2994" height="1728" />
     </state>

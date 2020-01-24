@@ -1,27 +1,29 @@
+const cheerio = require('cheerio');
 const express = require('express');
 const router = express.Router();
-const cheerio = require('cheerio');
-
 
 router.post('/v1', (req, res, next) => {
   const ret = {startedAt: Date.now()};
 
-  let errorHandler = (e) => {
+  const errorHandler = (e) => {
     console.error(e);
     console.info('ret', ret);
     res.jsonp({statusCode: httpsRes.statusCode, message: e.message, name: e.name});
   };
 
+  const parseBody = (req) => {
+    if (req.body.externalUrl) {
+      return req.body;
+    }
+    if (req.body.data) {
+      return JSON.parse(req.body.data);
+    }
+    return null;
+  };
 
-  let options;
-  if (req.body.externalUrl) {
-    options = req.body;
-  } else if (req.body.data) {
-    options = JSON.parse(req.body.data);
-  }
-
+  let options = parseBody(req);
   if (!options || !options.externalUrl) {
-    errorHandler({statusCode: 400, name:'error', message:'Problem: Cannot parse ' + req.body});
+    errorHandler({statusCode: 400, name: 'error', message: 'Problem: Cannot parse ' + req.body});
     return;
   }
 
@@ -67,7 +69,6 @@ router.post('/v1', (req, res, next) => {
         res.jsonp(ret);
         return;
       }
-
 
 
       if (options.replacements) {
