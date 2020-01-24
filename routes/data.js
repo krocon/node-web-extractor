@@ -15,6 +15,7 @@ router.post('/v1', (req, res, next) => {
 
   console.info('\n\n\n');
   console.info('req.body', req.body);
+  console.info('req.body.jqueryPattern', req.body.jqueryPattern);
   console.info('req.body.data', req.body.data);
 
 
@@ -25,7 +26,7 @@ router.post('/v1', (req, res, next) => {
     try {
       options = res.json(req.body.data);
     } catch (e2) {
-      errorHandler(e2);
+      options = req.body;
     }
   }
   const protocol = options.externalUrl.split(':')[0];
