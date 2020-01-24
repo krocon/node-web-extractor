@@ -20,9 +20,13 @@ router.post('/v1', (req, res, next) => {
 
   let options;
   try {
-    options = JSON.parse(req.body);
+    options = res.json(req.body);
   } catch (e) {
-    options = JSON.parse(req.body.data);
+    try {
+      options = res.json(req.body.data);
+    } catch (e2) {
+      errorHandler(e2);
+    }
   }
   const protocol = options.externalUrl.split(':')[0];
   const httpModule = require(protocol);

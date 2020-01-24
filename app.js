@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
 const dataRouter = require('./routes/data');
@@ -18,9 +17,15 @@ app.set('port', port);
 app.set('json spaces', 2);
 
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.json({
+  inflate: true,
+  limit: '100kb',
+  reviver: null,
+  strict: false,
+  type: 'application/json',
+  verify: undefined
+}));
+app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

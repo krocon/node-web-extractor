@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f737af9b-050e-480f-969f-a71b88fc579b" name="Default Changelist" comment="node_modules removed">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="f737af9b-050e-480f-969f-a71b88fc579b" name="Default Changelist" comment="Docker added">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/data.js" afterDir="false" />
+    </list>
+    <list id="f0e88c5a-178f-4b63-af73-3f8567c86979" name="dummy" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +36,25 @@
       </set>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="3" end1="5" start2="3" end2="5" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="6" end1="6" start2="6" end2="7" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="7" end1="7" start2="8" end2="13" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="32" end1="32" start2="38" end2="57" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="48" end1="48" start2="73" end2="79" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="83" end1="83" start2="114" end2="115" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="130" end1="131" start2="162" end2="205" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="144" end1="145" start2="218" end2="221" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="147" end1="148" start2="223" end2="224" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="150" end1="151" start2="226" end2="227" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="171" end1="172" start2="247" end2="248" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="174" end1="175" start2="250" end2="259" changelist="f737af9b-050e-480f-969f-a71b88fc579b" />
+        <range start1="179" end1="179" start2="263" end2="267" changelist="f0e88c5a-178f-4b63-af73-3f8567c86979" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1WiRQ56M04Ja3PzB3bV2BehOzwX" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -45,6 +70,12 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\data\entwicklung\node-web-extractor\docker" />
+      <recent name="D:\data\entwicklung\node-web-extractor" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -81,6 +112,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f737af9b-050e-480f-969f-a71b88fc579b" name="Default Changelist" comment="" />
+      <changelist id="f0e88c5a-178f-4b63-af73-3f8567c86979" name="dummy" comment="" />
       <created>1579630409472</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -128,7 +160,49 @@
       <option name="project" value="LOCAL" />
       <updated>1579714291193</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Docker added">
+      <created>1579798669024</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579798669024</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test">
+      <created>1579890382630</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579890382630</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Docker added">
+      <created>1579890779445</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1579890779445</updated>
+    </task>
+    <task id="LOCAL-00010" summary="test">
+      <created>1579891120012</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579891120012</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Docker added">
+      <created>1579891251439</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579891251439</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Docker added">
+      <created>1579891470032</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579891470032</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,13 +216,15 @@
     <MESSAGE value="node_modules removed" />
     <MESSAGE value="0.0.3" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="test" />
+    <MESSAGE value="Docker added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="936" y="464" key="CommitChangelistDialog2" timestamp="1579714290821">
+    <state x="936" y="464" key="CommitChangelistDialog2" timestamp="1579891469659">
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
-    <state x="936" y="464" key="CommitChangelistDialog2/78.0.2994.1728@78.0.2994.1728" timestamp="1579714290821" />
+    <state x="936" y="464" key="CommitChangelistDialog2/78.0.2994.1728@78.0.2994.1728" timestamp="1579891469659" />
     <state x="1078" y="610" key="FileChooserDialogImpl" timestamp="1579631161266">
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
@@ -169,10 +245,18 @@
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
     <state width="2399" height="210" key="GridCell.Tab.0.right/78.0.2994.1728@78.0.2994.1728" timestamp="1579714306421" />
-    <state x="891" y="601" key="Vcs.Push.Dialog.v2" timestamp="1579714292705">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1579890731970">
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
-    <state x="891" y="601" key="Vcs.Push.Dialog.v2/78.0.2994.1728@78.0.2994.1728" timestamp="1579714292705" />
+    <state width="498" height="446" key="SwitcherDM/78.0.2994.1728@78.0.2994.1728" timestamp="1579890731970" />
+    <state x="1148" y="786" key="VCS.ChangelistChooser" timestamp="1579890771962">
+      <screen x="78" y="0" width="2994" height="1728" />
+    </state>
+    <state x="1148" y="786" key="VCS.ChangelistChooser/78.0.2994.1728@78.0.2994.1728" timestamp="1579890771962" />
+    <state x="891" y="601" key="Vcs.Push.Dialog.v2" timestamp="1579891471462">
+      <screen x="78" y="0" width="2994" height="1728" />
+    </state>
+    <state x="891" y="601" key="Vcs.Push.Dialog.v2/78.0.2994.1728@78.0.2994.1728" timestamp="1579891471462" />
     <state x="1242" y="982" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579711987105">
       <screen x="78" y="0" width="2994" height="1728" />
     </state>
