@@ -15,20 +15,16 @@ router.post('/v1', (req, res, next) => {
 
   console.info('\n\n\n');
   console.info('req.body', req.body);
-  console.info('req.body.jqueryPattern', req.body.jqueryPattern);
-  console.info('req.body.data', req.body.data);
 
 
   let options;
-  try {
-    options = res.json(req.body);
-  } catch (e) {
-    try {
-      options = res.json(req.body.data);
-    } catch (e2) {
-      options = req.body;
-    }
+  if (req.body.externalUrl) {
+    options = req.body;
+  } else if (req.body.data) {
+    options = res.json(req.body.data);
   }
+  console.info('options', options);
+
   const protocol = options.externalUrl.split(':')[0];
   const httpModule = require(protocol);
 
