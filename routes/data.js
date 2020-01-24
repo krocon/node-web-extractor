@@ -13,17 +13,17 @@ router.post('/v1', (req, res, next) => {
   };
 
 
-  console.info('\n\n\n');
-  console.info('req.body', req.body);
-
-
   let options;
   if (req.body.externalUrl) {
     options = req.body;
   } else if (req.body.data) {
-    options = res.json(req.body.data);
+    options = JSON.parse(req.body.data);
   }
-  console.info('options', options);
+
+  if (!options.externalUrl) {
+    errorHandler({statusCode: 400, name:'error', message:'Problem: Cannot parse ' + req.body});
+    return;
+  }
 
   const protocol = options.externalUrl.split(':')[0];
   const httpModule = require(protocol);
@@ -41,8 +41,7 @@ router.post('/v1', (req, res, next) => {
 
     httpsRes.on('end', (o) => {
       const buffer = Buffer.concat(data);
-      let html = buffer.toString('UTF-8');
-      let text = html;
+      let text = buffer.toString('UTF-8');
       if (!text || !text.length) {
         ret.responseStatusCode = httpsRes.statusCode;
         ret.responseHeaders = httpsRes.headers;
