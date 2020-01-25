@@ -19,15 +19,15 @@ const parseBody = (req) => {
 };
 
 router.post('/v1', (req, res, next) => {
-  const errorHandler = (e, res) => {
+  // console.error('anfang>\n', req.body);
+
+  const ret = {startedAt: Date.now()};
+
+  const errorHandler = (e) => {
     console.error(e);
     console.info('ret', ret);
     res.jsonp({statusCode: res.statusCode, message: e.message, name: e.name});
   };
-  const ret = {startedAt: Date.now()};
-
-  console.error('req.body', req.body);
-  console.error('req.body.data', req.body.data);
 
   let options = parseBody(req);
   if (!options || !options.externalUrl) {
@@ -77,7 +77,6 @@ router.post('/v1', (req, res, next) => {
         return;
       }
 
-
       if (options.replacements) {
         for (let i = 0; i < options.replacements.length; i++) {
           const replacement = options.replacements[i];
@@ -125,7 +124,8 @@ router.post('/v1', (req, res, next) => {
       ret.finishedAt = Date.now();
       ret.durationInSecs = (ret.finishedAt - ret.startedAt) / 1000;
 
-      res.jsonp(ret);
+      // console.info('ende>\n', ret);
+      res.json(ret);
     });
 
     httpsRes.on("error", errorHandler);
