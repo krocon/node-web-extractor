@@ -8,7 +8,7 @@ router.post('/v1', (req, res, next) => {
   const errorHandler = (e) => {
     console.error(e);
     console.info('ret', ret);
-    res.jsonp({statusCode: httpsRes.statusCode, message: e.message, name: e.name});
+    res.jsonp({statusCode: res.statusCode, message: e.message, name: e.name});
   };
 
   const parseBody = (req) => {
@@ -18,11 +18,17 @@ router.post('/v1', (req, res, next) => {
     if (req.body.data) {
       return JSON.parse(req.body.data);
     }
+    try {
+      return JSON.parse(req.body);
+    } catch (e) {
+      console.error(e, e.message);
+    }
     return null;
   };
 
   let options = parseBody(req);
   if (!options || !options.externalUrl) {
+    console.error('req.body', req.body);
     errorHandler({statusCode: 400, name: 'error', message: 'Problem: Cannot parse ' + req.body});
     return;
   }
@@ -55,7 +61,6 @@ router.post('/v1', (req, res, next) => {
         ret.html = text;
         ret.options = options;
       }
-      console.info('text length:', ('' + text).length);
 
       if (options.replacePattern) {
         const re = new RegExp(options.replacePattern, "g");
