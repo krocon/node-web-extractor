@@ -2,33 +2,35 @@ const cheerio = require('cheerio');
 const express = require('express');
 const router = express.Router();
 
-router.post('/v1', (req, res, next) => {
-  const ret = {startedAt: Date.now()};
 
-  const errorHandler = (e) => {
+const parseBody = (req) => {
+  if (req.body.externalUrl) {
+    return req.body;
+  }
+  if (req.body.data) {
+    return JSON.parse(req.body.data);
+  }
+  try {
+    return JSON.parse(req.body);
+  } catch (e) {
+    console.error(e, e.message);
+  }
+  return null;
+};
+
+router.post('/v1', (req, res, next) => {
+  const errorHandler = (e, res) => {
     console.error(e);
     console.info('ret', ret);
     res.jsonp({statusCode: res.statusCode, message: e.message, name: e.name});
   };
+  const ret = {startedAt: Date.now()};
 
-  const parseBody = (req) => {
-    if (req.body.externalUrl) {
-      return req.body;
-    }
-    if (req.body.data) {
-      return JSON.parse(req.body.data);
-    }
-    try {
-      return JSON.parse(req.body);
-    } catch (e) {
-      console.error(e, e.message);
-    }
-    return null;
-  };
+  console.error('req.body', req.body);
+  console.error('req.body.data', req.body.data);
 
   let options = parseBody(req);
   if (!options || !options.externalUrl) {
-    console.error('req.body', req.body);
     errorHandler({statusCode: 400, name: 'error', message: 'Problem: Cannot parse ' + req.body});
     return;
   }
