@@ -100,6 +100,9 @@ router.post('/v1', (req, res, next) => {
 
       if (options.parseFloat) {
         try {
+          text = text
+            .replace(/[^0-9\\,]/g, '')
+            .replace(/,/g, '.');
           ret[options.targetKey] = parseFloat(text);
         } catch (e) {
           ret.parseFloatError = true;
